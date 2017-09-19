@@ -56,7 +56,7 @@
 - (CGFloat)imageAspectRatio
 {
     NSNumber *imageRatio = self.imageDictionary[@"aspect_ratio"];
-    if ([imageRatio isEqual:[NSNull null]]) {
+    if (!imageRatio) {
         imageRatio = @(1);
     }
     return [imageRatio floatValue];
